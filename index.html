@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hex's TC History Editor</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Game Data Manager</p>
+          <h1>Hex's TC History Editor</h1>
+        </div>
+        <div class="actions">
+          <button id="loadSampleBtn" class="secondary">Load Sample Data</button>
+          <label class="button primary" for="fileInput">Import File</label>
+          <input id="fileInput" type="file" accept=".json,.csv,.txt" />
+          <button id="exportBtn" class="secondary">Export JSON</button>
+        </div>
+      </header>
+
+      <div id="status" class="status" aria-live="polite">Ready.</div>
+
+      <main class="sections">
+        <section class="panel" data-section="players">
+          <div class="panel-header">
+            <h2>Players</h2>
+            <button class="add-btn" data-section="players">+ Add Player</button>
+          </div>
+          <div id="playersFormContainer"></div>
+          <div id="playersTable" class="data-table"></div>
+        </section>
+
+        <section class="panel" data-section="awards">
+          <div class="panel-header">
+            <h2>Awards</h2>
+            <button class="add-btn" data-section="awards">+ Add Award</button>
+          </div>
+          <div id="awardsFormContainer"></div>
+          <div id="awardsTable" class="data-table"></div>
+        </section>
+
+        <section class="panel" data-section="gfxs">
+          <div class="panel-header">
+            <h2>GFXs</h2>
+            <button class="add-btn" data-section="gfxs">+ Add GFX</button>
+          </div>
+          <div id="gfxsFormContainer"></div>
+          <div id="gfxsTable" class="data-table"></div>
+        </section>
+
+        <section class="panel" data-section="jerseys">
+          <div class="panel-header">
+            <h2>Jerseys</h2>
+            <button class="add-btn" data-section="jerseys">+ Add Jersey</button>
+          </div>
+          <div id="jerseysFormContainer"></div>
+          <div id="jerseysTable" class="data-table"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
